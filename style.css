@@ -1,0 +1,170 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PAGE ANIMATION */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: slideUp 0.8s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* HEADING */
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e3c72;
+    letter-spacing: 1px;
+}
+
+/* FORMS */
+form {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+form input {
+    padding: 10px 12px;
+    width: 180px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: #1e3c72;
+    box-shadow: 0 0 8px rgba(30,60,114,0.3);
+    outline: none;
+    transform: scale(1.03);
+}
+
+/* BUTTONS */
+button {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* LINKS */
+a {
+    color: #1e3c72;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2a5298;
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    animation: fadeIn 1.2s ease;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+}
+
+table tr {
+    transition: all 0.3s ease;
+}
+
+table tr:nth-child(even) {
+    background: #f2f6ff;
+}
+
+table tr:hover {
+    background: #dbe6ff;
+    transform: scale(1.01);
+}
+
+/* ACTION BUTTON LINK */
+table a {
+    padding: 6px 14px;
+    background: #1e3c72;
+    color: white;
+    border-radius: 15px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+table a:hover {
+    background: #2a5298;
+    transform: scale(1.1);
+}
+
+/* CANCEL EDIT LINK */
+form a {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background: #aaa;
+    color: #fff;
+    border-radius: 20px;
+}
+
+form a:hover {
+    background: #777;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    form input {
+        width: 100%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
